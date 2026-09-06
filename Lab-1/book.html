@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookNest | Book Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar detail-nav">
+    <div class="logo">Book<span>Nest</span></div>
+    <a href="index.html" class="back">← Back to collection</a>
+  </nav>
+
+  <main class="detail-page">
+    <div id="bookDetails"></div>
+  </main>
+
+  <footer>
+    <p>BookNest · Web Technology Lab · Experiment 01</p>
+  </footer>
+
+  <script>
+    const books = {
+      atomic: {
+        title: "Atomic Habits", author: "James Clear", year: "2018", genre: "Self-help",
+        pages: "320", cover: "cover-1",
+        description: "Atomic Habits explains how small, consistent changes can create remarkable results. The book presents a practical system for building good habits, breaking bad ones and improving a little every day."
+      },
+      alchemist: {
+        title: "The Alchemist", author: "Paulo Coelho", year: "1988", genre: "Adventure / Fiction",
+        pages: "208", cover: "cover-2",
+        description: "The Alchemist follows Santiago, a young shepherd who dreams of finding a hidden treasure. His journey becomes a story about purpose, courage, dreams and listening to the signs around us."
+      },
+      "1984": {
+        title: "1984", author: "George Orwell", year: "1949", genre: "Dystopian Fiction",
+        pages: "328", cover: "cover-3",
+        description: "1984 is a dystopian novel about Winston Smith, a man living under a totalitarian government that watches its citizens and controls information. The story explores freedom, truth and individual thought."
+      },
+      pride: {
+        title: "Pride and Prejudice", author: "Jane Austen", year: "1813", genre: "Romance / Classic",
+        pages: "432", cover: "cover-4",
+        description: "Pride and Prejudice follows Elizabeth Bennet as she navigates family, society and her changing feelings toward the reserved Mr. Darcy. It combines romance with sharp observations of social life."
+      },
+      mockingbird: {
+        title: "To Kill a Mockingbird", author: "Harper Lee", year: "1960", genre: "Classic / Fiction",
+        pages: "336", cover: "cover-5",
+        description: "Narrated by Scout Finch, this classic novel explores childhood, empathy and justice through events in a small Southern town. It encourages readers to understand people before judging them."
+      },
+      power: {
+        title: "The Power of Now", author: "Eckhart Tolle", year: "1997", genre: "Spirituality",
+        pages: "236", cover: "cover-6",
+        description: "The Power of Now focuses on living in the present moment. Eckhart Tolle discusses how excessive identification with thoughts can create stress and presents ideas for developing greater awareness."
+      }
+    };
+
+    const id = new URLSearchParams(window.location.search).get("id") || "atomic";
+    const book = books[id] || books.atomic;
+
+    document.title = `BookNest | ${book.title}`;
+    document.getElementById("bookDetails").innerHTML = `
+      <div class="detail-card">
+        <div class="detail-cover cover ${book.cover}">
+          <span>${book.title.toUpperCase()}</span><small>${book.author}</small>
+        </div>
+        <div class="detail-content">
+          <p class="eyebrow">BOOK INFORMATION</p>
+          <h1>${book.title}</h1>
+          <p class="author">by <strong>${book.author}</strong></p>
+          <p class="description">${book.description}</p>
+          <div class="facts">
+            <div><span>Published</span><strong>${book.year}</strong></div>
+            <div><span>Genre</span><strong>${book.genre}</strong></div>
+            <div><span>Pages</span><strong>${book.pages}</strong></div>
+          </div>
+          <a class="button" href="index.html">Explore more books →</a>
+        </div>
+      </div>
+    `;
+  </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sangam &mdash; Cultural Fest Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <aside class="hero">
+    <div class="hero-top"><span class="dot"></span> Registration now open</div>
+    <h1 class="hero-title">
+      <span>SAN</span><span class="accent">GAM</span>
+    </h1>
+    <p class="hero-tagline">A three-day confluence of music, movement, words and colour — bring your act, your crew, or just your curiosity.</p>
+
+    <ul class="hero-meta">
+      <li><span class="mark">📍</span> Central Quadrangle, Main Campus</li>
+      <li><span class="mark">🗓</span> 14&ndash;16 February</li>
+      <li><span class="mark">🎟</span> Free entry for registered participants</li>
+    </ul>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Music</span><span>Dance</span><span>Drama &amp; Theatre</span><span>Literary &amp; Debate</span><span>Fine Arts</span><span>Fashion Show</span><span>Photography</span><span>Gaming &amp; Esports</span>
+        <span>Music</span><span>Dance</span><span>Drama &amp; Theatre</span><span>Literary &amp; Debate</span><span>Fine Arts</span><span>Fashion Show</span><span>Photography</span><span>Gaming &amp; Esports</span>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="ticket-wrap">
+
+      <form class="ticket" id="regForm" novalidate>
+        <div class="ticket-header">
+          <span class="ticket-kicker">Registration pass</span>
+          <h1>Reserve your seat at Sangam</h1>
+          <p>One form per participant. Representing a group? Fill in the team name below and register each member separately.</p>
+        </div>
+
+        <div class="perforation"></div>
+
+        <section class="field-group">
+          <h2>About you</h2>
+          <div class="grid-2">
+            <label>Full name
+              <input type="text" name="name" placeholder="e.g. Ananya Rao" required>
+            </label>
+            <label>Email address
+              <input type="email" name="email" placeholder="you@example.com" required>
+            </label>
+            <label>Phone number
+              <input type="tel" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" required>
+            </label>
+            <label>Institute name
+              <input type="text" name="institute" placeholder="Your college or school" required>
+            </label>
+          </div>
+        </section>
+
+        <div class="perforation"></div>
+
+        <section class="field-group">
+          <h2>Registering as</h2>
+          <div class="radio-row">
+            <label class="pill-choice">
+              <input type="radio" name="category" value="Student" checked>
+              <span>Student</span>
+            </label>
+            <label class="pill-choice">
+              <input type="radio" name="category" value="Faculty">
+              <span>Faculty</span>
+            </label>
+            <label class="pill-choice">
+              <input type="radio" name="category" value="External guest">
+              <span>External guest</span>
+            </label>
+          </div>
+        </section>
+
+        <div class="perforation"></div>
+
+        <section class="field-group">
+          <h2>Choose your events</h2>
+          <p class="hint">Pick as many as you like &mdash; badges light up when selected.</p>
+          <div class="badge-grid">
+            <label class="badge" style="--dot:#E23670">
+              <input type="checkbox" name="events" value="Music"><span class="swatch"></span><span class="label">Music</span>
+            </label>
+            <label class="badge" style="--dot:#F5A524">
+              <input type="checkbox" name="events" value="Dance"><span class="swatch"></span><span class="label">Dance</span>
+            </label>
+            <label class="badge" style="--dot:#1E9E8C">
+              <input type="checkbox" name="events" value="Drama & Theatre"><span class="swatch"></span><span class="label">Drama &amp; Theatre</span>
+            </label>
+            <label class="badge" style="--dot:#7C5CBF">
+              <input type="checkbox" name="events" value="Literary & Debate"><span class="swatch"></span><span class="label">Literary &amp; Debate</span>
+            </label>
+            <label class="badge" style="--dot:#E23670">
+              <input type="checkbox" name="events" value="Fine Arts"><span class="swatch"></span><span class="label">Fine Arts</span>
+            </label>
+            <label class="badge" style="--dot:#F5A524">
+              <input type="checkbox" name="events" value="Fashion Show"><span class="swatch"></span><span class="label">Fashion Show</span>
+            </label>
+            <label class="badge" style="--dot:#1E9E8C">
+              <input type="checkbox" name="events" value="Photography"><span class="swatch"></span><span class="label">Photography</span>
+            </label>
+            <label class="badge" style="--dot:#7C5CBF">
+              <input type="checkbox" name="events" value="Gaming & Esports"><span class="swatch"></span><span class="label">Gaming &amp; Esports</span>
+            </label>
+          </div>
+        </section>
+
+        <div class="perforation"></div>
+
+        <section class="field-group grid-2">
+          <label>Preferred day
+            <select name="day">
+              <option>Day 1 &mdash; Feb 14, Music &amp; Dance</option>
+              <option>Day 2 &mdash; Feb 15, Drama &amp; Arts</option>
+              <option>Day 3 &mdash; Feb 16, Finale &amp; Fashion</option>
+            </select>
+          </label>
+          <label>Team name (optional)
+            <input type="text" name="team" placeholder="If registering as a group">
+          </label>
+        </section>
+
+        <section class="field-group" style="margin-top:20px;">
+          <label>Tell us about your act or any requirements
+            <textarea name="notes" placeholder="Instruments needed, group size, accessibility requirements..."></textarea>
+          </label>
+        </section>
+
+        <div class="ticket-stub">
+          <div class="stub-row"><span>Admits</span><strong>1 participant</strong></div>
+          <div class="stub-row"><span>Fest</span><strong>Sangam &rsquo;26</strong></div>
+          <div class="actions">
+            <button type="reset" class="btn ghost">Clear form</button>
+            <button type="submit" class="btn primary">Reserve my spot</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="success-card" id="successCard" hidden>
+        <div class="stamp">&#10003;</div>
+        <h2>You're on the list.</h2>
+        <p>Your pass has been reserved. Keep an eye on your inbox &mdash; the full schedule and venue map go out a week before the fest.</p>
+        <div class="success-summary" id="successSummary"></div>
+        <button type="button" class="btn ghost" style="background:var(--violet); color:var(--paper);" id="againBtn">Register another participant</button>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<canvas id="confetti"></canvas>
+
+<script src="script.js"></script>
+
+</body>
+</html>
